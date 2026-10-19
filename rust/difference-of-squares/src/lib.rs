@@ -1,14 +1,13 @@
 pub fn square_of_sum(n: u32) -> u32 {
-    let m: u32 = (1..=n).sum();
-    m * m
+    // Gauss schoolbot sum
+    ((n * (n + 1)) / 2) * ((n * (n + 1)) / 2)
 }
 
 pub fn sum_of_squares(n: u32) -> u32 {
-    (1..=n).map(|x| x * x).sum()
+    // Square pyramidal number
+    (n * (n + 1) * (2 * n + 1)) / 6
 }
 
 pub fn difference(n: u32) -> u32 {
-    dbg!(square_of_sum(n));
-    
-    2
+    square_of_sum(n) - sum_of_squares(n)
 }
