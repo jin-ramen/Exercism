@@ -1,0 +1,14 @@
+pub fn square_of_sum(n: u32) -> u32 {
+    let m: u32 = (1..=n).sum();
+    m * m
+}
+
+pub fn sum_of_squares(n: u32) -> u32 {
+    (1..=n).map(|x| x * x).sum()
+}
+
+pub fn difference(n: u32) -> u32 {
+    dbg!(square_of_sum(n));
+    
+    2
+}
